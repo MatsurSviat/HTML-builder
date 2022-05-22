@@ -11,11 +11,11 @@ fs.writeFile(
 );
 
 stdout.write('Введите текст\n');
+
 stdin.on('data', data => {
     fs.appendFile(
         path.join(__dirname, 'text.txt'),
         `${data}`,
-        
 
         process.stdin.on('data', data => {
            const dataString = data.toString()
